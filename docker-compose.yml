@@ -1,0 +1,36 @@
+version: '3'
+services:
+    rstudio:
+        build:
+            context: .
+            dockerfile: Dockerfile_R
+        ports:
+            - '8787:8787'
+        environment:
+            - DISABLE_AUTH=true
+        volumes:
+            - .:/home/rstudio/work
+    python:
+        build:
+            context: .
+            dockerfile: Dockerfile_Python
+        ports:
+            - '8888:8888'
+        environment:
+            - JUPYTER_ENABLE_LAB=yes
+        volumes:
+            - .:/home/python/work
+    ubuntu-texlive-ja:
+        #image: korosuke613/ubuntu-texlive-ja-devcontainer
+        build:
+            context: .
+            dockerfile: Dockerfile_Tex
+        environment:
+          SHELL: "/bin/bash"
+        volumes:
+            - .:/home/tex/work
+            - ~/.gitconfig:/root/.gitconfig
+            - ./.latexmkrc:/root/.latexmkrc
+
+
+
