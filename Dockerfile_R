@@ -1,7 +1,7 @@
 FROM rocker/verse:latest
 
 # R Packages
-RUN R -e "install.packages(c('tidyverse', 'dplyr', 'readxl', 'plotly', 'stargazer'))"
+RUN R -e "install.packages( c('languageserver', 'here', 'kableExtra', 'patchwork', 'janitor', 'markdown'))"
 
 # OS環境を日本語ロケールに切り替える
 ENV LANG ja_JP.UTF-8
