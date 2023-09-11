@@ -20,7 +20,9 @@
 				   "ikuyadeu.r", 
 				   "znck.grammarly", 
 				   "ms-python.python", 
-				   "formulahendry.terminal"
+				   "formulahendry.terminal", 
+				   "GitHub.copilot", 
+				   "janisdd.vscode-edit-csv",
 				], 
 
 	"shutdownAction": "stopCompose"
