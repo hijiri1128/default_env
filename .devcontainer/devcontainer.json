@@ -22,7 +22,7 @@
 				   "ms-python.python", 
 				   "formulahendry.terminal", 
 				   "GitHub.copilot", 
-				   "janisdd.vscode-edit-csv",
+				   "janisdd.vscode-edit-csv"
 				], 
 
 	"shutdownAction": "stopCompose"
